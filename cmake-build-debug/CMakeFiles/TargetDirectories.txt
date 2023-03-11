@@ -1,0 +1,3 @@
+D:/FCAI/Level2 second term/data_structure/assignments/A1/Sorting-Algorithms/cmake-build-debug/CMakeFiles/Sorting_Algorithms.dir
+D:/FCAI/Level2 second term/data_structure/assignments/A1/Sorting-Algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/FCAI/Level2 second term/data_structure/assignments/A1/Sorting-Algorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir
