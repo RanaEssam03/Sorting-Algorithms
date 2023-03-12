@@ -16,6 +16,20 @@ namespace sortlib{
         elmnt1 = temp;
     }
 
+
+    /// \author Rana Essam
+    /// \brief this is function generates a random array with fixed size containing values from (0 to 99)
+    /// \tparam T refers to the datatype of the array
+    /// \param randArray refers to the array which will be filled
+    /// \param sz refers to the size of the array
+    template <typename T>
+    void generate(T randArray[], int sz){
+        for(int i=0;i<sz;i++) {
+            randArray[i] = rand() % 100; //Generate number between 0 to 99
+        }
+
+    }
+
     /// \author Rana Essam
     /// \brief this generic sorting algorithm function using selection sort algorithm
     /// \tparam T refers to the date type
@@ -31,8 +45,6 @@ namespace sortlib{
                 }
             }
             swap(arr[least], arr[i]);
-
         }
-
     }
 }
