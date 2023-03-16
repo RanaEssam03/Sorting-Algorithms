@@ -73,7 +73,7 @@ namespace sortlib{
     /// \param sz   refers to the size of the array
     template<typename T>
     int partition(T arr[],int left,int right,int sz){
-        int x = arr[left];
+        T x = arr[left];
         int i = left;
         for(int j=left+1 ; j < sz ;j++){
             if(arr[j] < x){
