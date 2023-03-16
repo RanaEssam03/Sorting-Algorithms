@@ -153,4 +153,29 @@ namespace sortlib{
             merge(arr, low, mid, high);
         }
     }
+
+    template<class T>
+    void countSort(T arr[], int n){
+        int mx = INT_MIN;
+        for (int i = 0; i < n; ++i) {
+            mx = std::max(arr[i], mx);
+        }
+        int c[mx+1], result[n];
+        for (int i = 0; i <= mx; ++i) {
+            c[i] = 0;
+        }
+        for (int i = 0; i < n; ++i) {
+            c[arr[i]]++;
+        }
+        for (int i = 1; i <= mx; ++i) {
+            c[i] += c[i-1];
+        }
+        for (int i = n-1; i >= 0; --i) {
+            result[c[arr[i]-1]] = arr[i];
+            c[arr[i]]--;
+        }
+        for (int i = 0; i < n; ++i) {
+            arr[i] = result[i];
+        }
+    }
 }
