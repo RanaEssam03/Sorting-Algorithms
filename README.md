@@ -1,2 +1,9 @@
 # Sorting-Algorithms-
-This is our  implementation of bubble , insertion , selection , shell , count, merge and quick sort  algorithms. 
+This is our  implementation of the following sorting algorithms:
+* bubble sort
+* insertion sort
+* selection sort
+* shell sort
+* count sort
+* merge sort
+* quick sort
