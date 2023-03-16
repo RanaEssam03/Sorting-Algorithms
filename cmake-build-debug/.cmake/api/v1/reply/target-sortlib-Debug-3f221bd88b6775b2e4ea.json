@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Sorting_Algorithms.exe"
+			"path" : "sortlib.exe"
 		},
 		{
-			"path" : "Sorting_Algorithms.pdb"
+			"path" : "sortlib.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 7,
 				"parent" : 0
 			}
 		]
@@ -38,11 +38,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-Sorting_Algorithms-Debug-29d4064d621072aeb6fd.json
-					"fragment" : "-g"
-========
 					"fragment" : "-g -fdiagnostics-color=always"
->>>>>>>> main:cmake-build-debug/.cmake/api/v1/reply/target-Sorting_Algorithms-Debug-64dfd15a2ea7ce7322d9.json
 				},
 				{
 					"fragment" : "-std=gnu++17"
@@ -63,7 +59,7 @@
 			]
 		}
 	],
-	"id" : "Sorting_Algorithms::@6890427a1f51a3e7e1df",
+	"id" : "sortlib::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -83,8 +79,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Sorting_Algorithms",
-	"nameOnDisk" : "Sorting_Algorithms.exe",
+	"name" : "sortlib",
+	"nameOnDisk" : "sortlib.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -105,7 +101,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.cpp",
+			"path" : "sortlib.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

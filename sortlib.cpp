@@ -153,6 +153,7 @@ namespace sortlib{
             merge(arr, low, mid, high);
         }
     }
+<<<<<<< HEAD
 
     template<class T>
     void countSort(T arr[], int n){
@@ -178,4 +179,6 @@ namespace sortlib{
             arr[i] = result[i];
         }
     }
+=======
+>>>>>>> main
 }
