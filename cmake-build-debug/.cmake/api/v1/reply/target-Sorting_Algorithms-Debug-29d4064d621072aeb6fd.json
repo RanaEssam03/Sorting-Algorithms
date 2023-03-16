@@ -38,11 +38,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-Sorting_Algorithms-Debug-29d4064d621072aeb6fd.json
 					"fragment" : "-g"
-========
-					"fragment" : "-g -fdiagnostics-color=always"
->>>>>>>> main:cmake-build-debug/.cmake/api/v1/reply/target-Sorting_Algorithms-Debug-64dfd15a2ea7ce7322d9.json
 				},
 				{
 					"fragment" : "-std=gnu++17"
