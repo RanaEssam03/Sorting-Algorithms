@@ -147,12 +147,18 @@ namespace sortlib{
     template<class T>
     void mergeSort(T arr[], int low, int high){
         if(low < high){
-            int mid = floor((low + high)/2);
+            int mid =(low + high)/2;
             mergeSort(arr, low, mid);
             mergeSort(arr, mid+1, high);
             merge(arr, low, mid, high);
         }
     }
+
+    /// \author Merna Islam
+    /// \brief this is a generic sorting algorithm function using count sort algorithm
+    /// \tparam T is the template class T [data type]
+    /// \param arr refers to the array that will be sorted
+    /// \param n refers to the size of the array
 
     template<class T>
     void countSort(T arr[], int n){
