@@ -47,4 +47,55 @@ namespace sortlib{
             swap(arr[least], arr[i]);
         }
     }
+
+    /// \author Mohannad Hisham
+    /// \brief this function sees what is inserted to the array then puts it in the correct position
+    /// \tparam T refers to the date type
+    /// \param arr refers to the array that will be sorted
+    /// \param n   refers to the length of the array
+    template <typename T>
+    void insertionSort (T arr[], int n) {
+        for (int i = 1, j; i < n; i++){
+            T tmp = arr [i];
+            for (j = i; j > 0 && tmp < arr [j-1];j--){
+                arr[j] = arr[j-1];
+            }
+            arr [j] = tmp;
+        }
+    }
+
+    /// \author Mohannad Hisham
+    /// \brief this function works on an array by sorting it with divide and conquer method
+    /// \tparam T refers to the date type
+    /// \param arr refers to the array that will be sorted
+    /// \param left   refers to the start index
+    /// \param right   refers to the end index
+    /// \param sz   refers to the size of the array
+    template<typename T>
+    int partition(T arr[],int left,int right,int sz){
+        int x = arr[left];
+        int i = left;
+        for(int j=left+1 ; j < sz ;j++){
+            if(arr[j] < x){
+                i+=1;
+                swap(arr[i],arr[j]);
+            }
+        }
+        swap(arr[i],arr[left]);
+        return i;
+    }
+
+    template<typename T>
+    void quickSort(T arr[],int left,int right,int sz){
+        int x =partition(arr,left,right,sz);
+        if(left >=right){
+            return;
+        }
+        else{
+
+            partition(arr,left,right,sz);
+            quickSort(arr,left, x-1,sz);
+            quickSort(arr, x+1,right,sz);
+        }
+    }
 }
