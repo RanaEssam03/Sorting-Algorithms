@@ -1,34 +1,25 @@
 #include "sortlib.cpp"
 
 
+using namespace std::chrono;
+using namespace std;
+
 int main() {
-
-    int sz;
-    std::cout << "Enter the size of array:: ";
-    std::cin >> sz;
+    int sz=50000;
+    cout << "Enter the size of array:: ";
+//    cin >> sz;
     int randArray[sz];
-    int randArray2[sz];
-    int randArray3[sz];
+
     sortlib::generate(randArray, sz);
-    sortlib::generate(randArray2, sz);
-    sortlib::generate(randArray3, sz);
-    sortlib::selection<int>(randArray, sz);
-    sortlib::mergeSort<int>(randArray2, 0, sz-1);
-    sortlib::countSort<int>(randArray3, sz);
-    for(int i = 0 ; i < sz ; i++){
-        std::cout << i+1 << " : " << randArray[i] << '\n';
-    }
-    std::cout << "\n Sorting using Merge Sort: \n";
-    for(int i = 0 ; i < sz ; i++){
-        std::cout << randArray2[i] << ' ';
-    }
-    std::cout << "\n";
+    auto start = high_resolution_clock::now();
+    sortlib::quickSort(randArray,0, sz-1, sz);
+    auto stop = high_resolution_clock::now();
 
-    std::cout << "\n Sorting using Count Sort: \n";
+    auto duration = duration_cast<microseconds>(stop - start);
     for(int i = 0 ; i < sz ; i++){
-        std::cout << randArray3[i] << ' ';
+        cout<< randArray[i] << ' ';
     }
-    std::cout << "\n";
-
+    cout << endl << " time = ";
+    cout << duration.count() << "microseconds\n";
     return 0;
 }
