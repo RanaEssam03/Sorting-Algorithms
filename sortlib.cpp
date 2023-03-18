@@ -1,15 +1,19 @@
-//
-// Created by Rana Essam on 3/11/2023.
-// Modified by Merna Islam on 3/16/2023.
-//
+/// @Created by Rana Essam on 3/11/2023.
+/// @Modified by Merna Islam on 3/16/2023.
+/// @Modified by Mohannad Hisham on 3/16/2023
+/// @purpose Implement a group of sorting algorithms in one namespace:
+/// *Shell sort * Bubble sort * Selection sort * Insertion sort
+/// * Quick sort * Count sort * Merge sort
+//_______________________________________________________________________________________
+
 #include <bits/stdc++.h>
 
 namespace sortlib {
     /// \author Rana Essam
     /// \brief this is a generic swap function which swaps two elements from the same datatype
     /// \tparam T refers to the datatype of both elements
-    /// \param t refers to the first element which will be swapped
-    /// \param t1 refers to the second element which will be swapped
+    /// \param elmnt1 refers to the first element which will be swapped
+    /// \param elmnt2 refers to the second element which will be swapped
     template<typename T>
     void swap(T &elmnt1, T &elmnt2) {
         T temp = elmnt2;
@@ -76,8 +80,8 @@ namespace sortlib {
     int partition(T arr[], int left, int right, int sz) {
         T x = arr[left];
         int i = left;
-        for (int j = left + 1; j < sz; j++) {
-            if (arr[j] < x) {
+        for (int j = left + 1; j <= right; j++) {
+            if (arr[j] < x && j != i) {
                 i += 1;
                 swap(arr[i], arr[j]);
             }
@@ -93,7 +97,7 @@ namespace sortlib {
             return;
         } else {
 
-            partition(arr, left, right, sz);
+//            partition(arr, left, right, sz);
             quickSort(arr, left, x - 1, sz);
             quickSort(arr, x + 1, right, sz);
         }
